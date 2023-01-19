@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Wheather App</title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <label for="cities">Location:</label>
+        <select name="city" id="cities">
+          <option value="default" selected disabled>--Select a city--</option>
+          <option class='city' value="Nürnberg">Nürnberg</option>
+          <option class='city' value="London">London</option>
+          <option class='city' value="New York">New York</option>
+          <option class='city' value="Ansbach">Ansbach</option>
+          <option class='city' value="Sydney">Sydney</option>
+        </select>
+        <input type="text" name="city" class="cityInput">
+      </section>
+      
+      <section>
+        <label for="range">Please, define the data count = </label>
+        <input id="rangeOutput" for="range" placeholder="1-40" oninput="range.value=rangeOutput.value"></input>
+        <input class='range' type="range" name="range" id="range" min="0" max="40" oninput="rangeOutput.value=range.value">
+        
+        <button class="submit">Submit</button>
+      </section>
+    </header>
+
+    <main>
+      <section class="main-container"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
